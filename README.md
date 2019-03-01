@@ -1,5 +1,5 @@
 # Framework.SFTP
-It is a .NET Core/Standard library that provides SFTP helpful methods and implementation
+It is a .NET Core/Standard library that provides usefull SFTP methods and implementation
 
 Technologies
 - [x] .NET Core and .NET Standard
