@@ -2,6 +2,23 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>Framework.Services.SFTP</PackageId>
+    <Authors>Jose Carlos de Jesus Junior</Authors>
+    <Company>Jose Carlos de Jesus Junior</Company>
+    <Description>It is a .NET Core/Standard library that provides usefull SFTP methods and implementation</Description>
+    <Copyright>Copyright 2018</Copyright>
+    <PackageLicenseUrl>https://github.com/juninhodigital/Framework.SFTP/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/juninhodigital/Framework.SFTP</PackageProjectUrl>
+    <PackageIconUrl>https://github.com/juninhodigital/Framework.Core/blob/master/Icons/FS_IconSmall.png?raw=true</PackageIconUrl>
+    <RepositoryUrl>https://github.com/juninhodigital/Framework.SFTP</RepositoryUrl>
+    <RepositoryType>Github</RepositoryType>
+    <PackageTags>Extension Methods, Library, Helper, SFTP</PackageTags>
+    <NeutralLanguage>English (United States)</NeutralLanguage>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Optimize>true</Optimize>
   </PropertyGroup>
 
   <ItemGroup>
