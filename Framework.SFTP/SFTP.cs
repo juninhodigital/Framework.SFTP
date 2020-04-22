@@ -166,6 +166,42 @@ namespace Framework.SFTP
         }
 
         /// <summary>
+        /// Check whether a folder exists
+        /// </summary>
+        /// <param name="SftpPath">File path on the SFTP server (Example: "/synchro/incoming/")</param>
+        /// <param name="create">Indicate that a new directory should be create if it does not exists</param>
+        /// <returns>True if directory exists</returns>
+        public bool Exists(string SftpPath, bool create=false)
+        {
+            var output = false;
+            var connection = GetConnection();
+
+            using (var sftp = new SftpClient(connection))
+            {
+                sftp.Connect();
+
+                if(sftp.Exists(SftpPath))
+                {
+                    output = true;
+                }
+                else
+                {
+                    if(create)
+                    {
+                        sftp.CreateDirectory(SftpPath);
+                        output = true;
+                    }
+                }
+
+                sftp.Disconnect();
+            }
+
+            connection = null;
+
+            return output;
+        }
+
+        /// <summary>
         /// Get the connection object in order to stabilish a connection to the SFTP
         /// </summary>
         /// <returns></returns>
